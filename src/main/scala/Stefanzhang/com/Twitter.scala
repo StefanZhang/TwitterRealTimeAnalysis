@@ -4,6 +4,8 @@ import org.apache.spark.SparkConf
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import com.alibaba.fastjson.JSON
 import java.sql.{Connection,DriverManager}
+import SentimentAnalysisUtils.detectSentiment
+
 
 object Twitter {
 
@@ -38,11 +40,14 @@ object Twitter {
           val source = json.getString("source")
 
           //TODO.. Sentiment Analysis
-          val senti = "pos"
+          val senti = detectSentiment(text)
+
+          println("text"+text+", "+senti.toString)
+          //val senti = "pos"
 
           //insert new vals
           val sql2 = String.format("INSERT INTO Twitter.tweets (time, name, text, sentiment, source) VALUES (\'%s\',\'%s\', \'%s\', \'%s\', \'%s\');",create,name, text, senti, source)
-          conn.prepareStatement(sql2).executeUpdate()
+          //conn.prepareStatement(sql2).executeUpdate()
 
         }catch {
           case e => e.printStackTrace()
