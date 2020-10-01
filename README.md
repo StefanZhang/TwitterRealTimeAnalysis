@@ -39,6 +39,7 @@
 
   <p align="center">
     YOUR_SHORT_DESCRIPTION
+    <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
     ·
     <a href="https://github.com/StefanZhang/TwitterRealTimeAnalysisissues">Report Bug</a>
