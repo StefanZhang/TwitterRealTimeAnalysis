@@ -35,7 +35,7 @@
 <br />
 <p align="center">
 
-  <h3 align="center">YOUR_TITLE</h3>
+  <h3 align="center">Twitter Real Time Sentiment Analysis</h3>
 
   <p align="center">
     YOUR_SHORT_DESCRIPTION
