@@ -41,9 +41,9 @@
     YOUR_SHORT_DESCRIPTION
     <a href="https://github.com/github_username/repo_name">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/StefanZhang/TwitterRealTimeAnalysisissues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/StefanZhang/TwitterRealTimeAnalysis/issues">Request Feature</a>
   </p>
 </p>
 
