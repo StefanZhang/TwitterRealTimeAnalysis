@@ -42,9 +42,7 @@
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
     ·
-    <a href="https://github.com/StefanZhang/TwitterRealTimeAnalysisissues">Report Bug</a>
-    ·
-    <a href="https://github.com/StefanZhang/TwitterRealTimeAnalysis/issues">Request Feature</a>
+    <a href="https://github.com/StefanZhang/TwitterRealTimeAnalysis/issues">Report Bug</a>
   </p>
 </p>
 
