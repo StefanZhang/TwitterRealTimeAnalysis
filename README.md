@@ -16,11 +16,6 @@
 
   <p align="center">
     Information is crucial to the function of a democratic society where well- informed citizens can make rational political decisions. While in the past political entities were primarily utilizing newspaper and later television to inform the public, with the rise of the Internet and online social media, the political arena has transformed into a more complex structure. So, it is essential to see how people on the Internet, particularly on Twitter, think about the presidential election candidates.
-  </br>
- 
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/StefanZhang/TwitterRealTimeAnalysis/issues">Report Bug</a>
   </p>
 </p>
 
