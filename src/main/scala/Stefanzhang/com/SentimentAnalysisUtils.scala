@@ -10,10 +10,8 @@ import edu.stanford.nlp.sentiment.SentimentCoreAnnotations
 import scala.collection.JavaConversions._
 import scala.collection.mutable.ListBuffer
 
-
 // Credit to @Vincent Spiewak
 // https://github.com/vspiewak/twitter-sentiment-analysis/blob/master/src/main/scala/com/github/vspiewak/util/SentimentAnalysisUtils.scala
-
 
 object SentimentAnalysisUtils {
 
@@ -47,8 +45,8 @@ object SentimentAnalysisUtils {
       sentiments += sentiment.toDouble
       sizes += partText.length
 
-      println("debug: " + sentiment)
-      println("size: " + partText.length)
+//      println("debug: " + sentiment)
+//      println("size: " + partText.length)
 
     }
 
@@ -66,9 +64,10 @@ object SentimentAnalysisUtils {
     }
 
 
-    println("debug: main: " + mainSentiment)
-    println("debug: avg: " + averageSentiment)
-    println("debug: weighted: " + weightedSentiment)
+
+//    println("debug: main: " + mainSentiment)
+//    println("debug: avg: " + averageSentiment)
+//    println("debug: weighted: " + weightedSentiment)
 
     /*
      0 -> very negative
