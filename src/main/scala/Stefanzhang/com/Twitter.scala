@@ -36,7 +36,8 @@ object Twitter {
           val json = JSON.parseObject(t)
           val create = json.getString("created_at")
           val name = json.getJSONObject("user").getString("screen_name")
-          val text = json.getString("text").replace("'", "''")
+          val text_t = json.getString("text")
+          val text = text_t.replaceAll("'", "")
           val source = json.getString("source")
 
           //Sentiment Analysis
