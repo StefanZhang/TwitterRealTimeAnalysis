@@ -1,7 +1,6 @@
 package Stefanzhang.com
 
 import java.util.Properties
-
 import edu.stanford.nlp.ling.CoreAnnotations
 import edu.stanford.nlp.neural.rnn.RNNCoreAnnotations
 import edu.stanford.nlp.pipeline.StanfordCoreNLP
