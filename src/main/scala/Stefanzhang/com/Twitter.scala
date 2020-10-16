@@ -81,7 +81,7 @@ object Twitter {
           val create = DateFormater(creat_t)
           val name = json.getJSONObject("user").getString("screen_name")
           val text_t = json.getString("text")
-          val text = text_t.replaceAll("'", "")
+          val text = text_t.replaceAll("'", "").replaceAll("\n", " ")
           val source_t = json.getString("source")
           val source = sourceDet(source_t)
 
