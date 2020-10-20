@@ -5,22 +5,23 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
 import com.alibaba.fastjson.JSON
 import java.sql.{Connection,DriverManager}
 import SentimentAnalysisUtils.detectSentiment
+import org.apache.spark.streaming.flume.FlumeUtils
 
 
 object Twitter {
 
   def main(args: Array[String]): Unit = {
 
-    if(args.length !=2){
-      System.err.println("Usage: Twitter <db_user> <db_pass>")
+    if(args.length !=4){
+      System.err.println("Usage: Twitter <db_user> <db_pass> <hostname> <port>")
       System.exit(1)
     }
 
-    val Array(user, pass) = args
+    val Array(user, pass, hostname, port) = args
     val sparkConf = new SparkConf()//.setAppName("Twitter").setMaster("local[2]")
-    val ssc = new StreamingContext(sparkConf, Seconds(5))
-
-    val lines = ssc.textFileStream("hdfs://hadoop:8020/twitter_data/")
+    val ssc = new StreamingContext(sparkConf, Seconds(10)) //5
+    val flumeStream = FlumeUtils.createPollingStream(ssc, hostname, port.toInt)
+    val tweets = flumeStream.map(e => new String(e.event.getBody.array))
 
     // Helper functions
     def sourceDet(s:String): String = {
@@ -41,7 +42,6 @@ object Twitter {
         return "other"
       }
     }
-
     def DateFormater(s: String): String = {
       val words = s.split(" ")
       val year = words(5)
@@ -66,14 +66,14 @@ object Twitter {
       return year+"/"+m+"/"+day+" "+time2
     }
 
-    lines.foreachRDD(x=>{
+    tweets.foreachRDD(x=>{
       x.foreach(t=>{
         Class.forName("com.mysql.jdbc.Driver")
         val conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", user, pass)
         try {
           //remove duplicates
-          val sql1 = String.format("delete t1 FROM tweets t1 INNER JOIN tweets t2 WHERE t1.id < t2.id AND t1.name = t2.name;")
-          conn.prepareStatement(sql1).executeUpdate()
+          //val sql1 = String.format("delete t1 FROM tweets t1 INNER JOIN tweets t2 WHERE t1.id < t2.id AND t1.name = t2.name;")
+          //conn.prepareStatement(sql1).executeUpdate()
 
           //parse json
           val json = JSON.parseObject(t)
@@ -85,11 +85,9 @@ object Twitter {
           val source_t = json.getString("source")
           val source = sourceDet(source_t)
 
-          println("create: "+create)
           //Sentiment Analysis
           val senti = detectSentiment(text).toString
-          println("source: "+source)
-          println("text"+text+", "+senti.toString)
+          println("text: "+text+", "+senti.toString)
 
           //insert new vals
           val sql2 = String.format("INSERT INTO twitter.tweets (time, name, text, sentiment, source) VALUES (\'%s\',\'%s\', \'%s\', \'%s\', \'%s\');",create, name, text, senti, source)
@@ -99,7 +97,7 @@ object Twitter {
         }catch {
           case e => e.printStackTrace()
         }finally {
-          conn.close()
+          //conn.close()
         }
       })
     })
