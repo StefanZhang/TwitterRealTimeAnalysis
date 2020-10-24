@@ -71,9 +71,6 @@ object Twitter {
         Class.forName("com.mysql.jdbc.Driver")
         val conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", user, pass)
         try {
-          //remove duplicates
-          //val sql1 = String.format("delete t1 FROM tweets t1 INNER JOIN tweets t2 WHERE t1.id < t2.id AND t1.name = t2.name;")
-          //conn.prepareStatement(sql1).executeUpdate()
 
           //parse json
           val json = JSON.parseObject(t)
@@ -97,7 +94,7 @@ object Twitter {
         }catch {
           case e => e.printStackTrace()
         }finally {
-          //conn.close()
+          conn.close()
         }
       })
     })
