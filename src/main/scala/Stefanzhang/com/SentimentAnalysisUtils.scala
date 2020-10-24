@@ -44,9 +44,6 @@ object SentimentAnalysisUtils {
       sentiments += sentiment.toDouble
       sizes += partText.length
 
-//      println("debug: " + sentiment)
-//      println("size: " + partText.length)
-
     }
 
     val averageSentiment:Double = {
@@ -61,12 +58,6 @@ object SentimentAnalysisUtils {
       mainSentiment = -1
       weightedSentiment = -1
     }
-
-
-
-//    println("debug: main: " + mainSentiment)
-//    println("debug: avg: " + averageSentiment)
-//    println("debug: weighted: " + weightedSentiment)
 
     /*
      0 -> very negative
