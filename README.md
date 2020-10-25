@@ -118,10 +118,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+Xiaofeng(Stefan) Zhang - xzhang23@wpi.edu
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
+Project Link: [https://github.com/StefanZhang/TwitterRealTimeAnalysis](https://github.com/StefanZhang/TwitterRealTimeAnalysis)
 
 
 
