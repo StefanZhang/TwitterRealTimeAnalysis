@@ -1,9 +1,6 @@
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -130,16 +127,12 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=flat-square
-[contributors-url]: https://github.com/github_username/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=flat-square
-[forks-url]: https://github.com/github_username/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=flat-square
-[stars-url]: https://github.com/github_username/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=flat-square
-[issues-url]: https://github.com/github_username/repo/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=flat-square
-[license-url]: https://github.com/github_username/repo/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github.com/StefanZhang/TwitterRealTimeAnalysis.svg?style=flat-square
+[contributors-url]: https://github.com/StefanZhang/TwitterRealTimeAnalysis/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/StefanZhang/TwitterRealTimeAnalysis.svg?style=flat-square
+[forks-url]: https://github.com/StefanZhang/TwitterRealTimeAnalysis/network/members
+[issues-shield]: https://img.shields.io/github/issues/StefanZhang/TwitterRealTimeAnalysis.svg?style=flat-square
+[issues-url]: https://github.com/StefanZhang/TwitterRealTimeAnalysis/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/github_username
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://www.linkedin.com/in/xiaofeng-stefan-zhang-26709987/
+[product-screenshot]: https://i.loli.net/2020/10/23/aNpbTWYvcQZ8xLM.png
