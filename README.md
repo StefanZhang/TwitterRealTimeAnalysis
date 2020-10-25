@@ -127,7 +127,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github.com/StefanZhang/TwitterRealTimeAnalysis.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/StefanZhang/TwitterRealTimeAnalysis.svg?style=flat-square
 [contributors-url]: https://github.com/StefanZhang/TwitterRealTimeAnalysis/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/StefanZhang/TwitterRealTimeAnalysis.svg?style=flat-square
 [forks-url]: https://github.com/StefanZhang/TwitterRealTimeAnalysis/network/members
