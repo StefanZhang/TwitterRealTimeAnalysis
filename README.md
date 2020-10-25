@@ -44,11 +44,11 @@ This is the back-end implementation of [this project](https://github.com/StefanZ
 
 ### Built With
 
-* []()
-* []()
-* []()
-
-
+* [Apache Flume 1.6.0](https://flume.apache.org/releases/content/1.6.0/FlumeUserGuide.html)
+* [Apache Spark 2.2.0](https://spark.apache.org/releases/spark-release-2-2-0.html)
+* [Apache Hadoop 2.6.0](https://hadoop.apache.org/docs/r2.6.0/)
+* [Scala 2.11.8](https://www.scala-lang.org/download/2.11.8.html)
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
