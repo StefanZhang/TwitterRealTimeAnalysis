@@ -44,7 +44,7 @@ This is the back-end implementation of [this project](https://github.com/StefanZ
 
 ### Built With
 
-* [Apache Flume 1.6.0](https://flume.apache.org/releases/content/1.6.0/FlumeUserGuide.html)
+* [Apache Flume 1.6.0 - CDH5.7.0](https://flume.apache.org/releases/content/1.6.0/FlumeUserGuide.html)
 * [Apache Spark 2.2.0](https://spark.apache.org/releases/spark-release-2-2-0.html)
 * [Apache Hadoop 2.6.0](https://hadoop.apache.org/docs/r2.6.0/)
 * [Scala 2.11.8](https://www.scala-lang.org/download/2.11.8.html)
@@ -71,12 +71,20 @@ To get a local copy up and running follow these simple steps.
 
 1. Create new dir /root/lib on VPS, and upload the .jar file created by this project. 
 2. Start MySQL service
-3. Start Flume service in $FLUME_HOME/bin, using this commmand:
+4. Create new table 'tweets'
+5. Start Flume service in $FLUME_HOME/bin, using this command:
 (`nohup ./flume-ng agent \
 --conf ./root/app/apache-flume-1.6.0-cdh5.7.0-bin/conf/ \
 -f /root/app/apache-flume-1.6.0-cdh5.7.0-bin/conf/twitter.conf \
 Dflume.root.logger=DEBUG,console -n TwitterAgent >flume.log 2>&1 &
 `)
+5. Start Spark Service in $SPARK_HOME/bin, using this command:
+(`nohup ./spark-submit \
+--class Stefanzhang.com.Twitter \
+--master local[2] \
+--name Twitter \
+--packages org.apache.spark:spark-streaming-flume_2.11:2.2.0 \
+/root/lib/Twitter_Flume_SparkStreaming-1.0-SNAPSHOT.jar [DB Name] [DB Password] [Host IP] [Flume Port] >spark.log 2>&1 &`)
 
 
 <!-- CONTRIBUTING -->
