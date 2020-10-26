@@ -72,7 +72,12 @@ To get a local copy up and running follow these simple steps.
 1. Create new dir /root/lib on VPS, and upload the .jar file created by this project. 
 2. Start MySQL service
 3. Start Flume service in $FLUME_HOME/bin, using this commmand:
-(``)
+(`nohup ./flume-ng agent \
+--conf ./root/app/apache-flume-1.6.0-cdh5.7.0-bin/conf/ \
+-f /root/app/apache-flume-1.6.0-cdh5.7.0-bin/conf/twitter.conf \
+Dflume.root.logger=DEBUG,console -n TwitterAgent >flume.log 2>&1 &
+`)
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
