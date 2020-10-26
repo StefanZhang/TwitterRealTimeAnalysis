@@ -57,35 +57,22 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-1. VPS
-
-pending
-
-
-
+1. VPS with CentOS, so the analysis [dashboard](https://github.com/StefanZhang/TwitterRealTimeAnalysis-Dashboard) can also work. Local VM can also be used as proof of concept.
+2. Twitter API
 
 ### Installation
 
-1. Clone the repo
-
-pending
-
+1. Install/configure Apache Flume and Apache Spark on VPS correctly.
+2. Install IDEA and Scala plugin on your local computer.
+3. Clone the project to local computer, and build .jar with Maven.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
-
-
+1. Create new dir /root/lib on VPS, and upload the .jar file created by this project. 
+2. Start MySQL service
+3. Start Flume service in $FLUME_HOME/bin, using this commmand:
+(``)
 
 <!-- CONTRIBUTING -->
 ## Contributing
