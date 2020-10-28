@@ -71,7 +71,7 @@ To get a local copy up and running follow these simple steps.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. Create new dir /root/lib on VPS, and upload the .jar file created by this project. 
+1. Create new dir /root/lib on VPS, and upload the Twitter_Flume_SparkStreaming-1.0-SNAPSHOT.jar.
 2. Start MySQL service
 4. Create new table 'tweets'
 5. Start Flume service in $FLUME_HOME/bin, using this command:
