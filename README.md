@@ -66,11 +66,17 @@ To get a local copy up and running follow these simple steps.
   * flume-sources-1.0-SNAPSHOT.jar [here](https://github.com/StefanZhang/TwitterRealTimeAnalysis/tree/master/jars)
   * twitter4j-stream-4.0.2.jar [here](https://github.com/StefanZhang/TwitterRealTimeAnalysis/tree/master/jars)
 3. Create Flume configuration file [twitter.conf](https://github.com/StefanZhang/TwitterRealTimeAnalysis/blob/master/twitter.conf) in $FLUME_HOME/conf
-4. Install IDEA and Scala plugin on your local computer.
-5. Clone the project to local computer, load all the repositories on the pom.xml, and Maven build the Twitter_Flume_SparkStreaming-1.0-SNAPSHOT.jar. 
-6. Create new dir /root/lib on VPS, and upload the Twitter_Flume_SparkStreaming-1.0-SNAPSHOT.jar.
-7. Start MySQL service
-8. Create new table 'tweets' using (`create table tweets (
+4. Make sure $SPARK_HOME/jar has the following .jar files:
+  * ejml-0.23.jar [here](https://github.com/StefanZhang/TwitterRealTimeAnalysis/tree/master/jars)
+  * fastjson-1.2.73.jar [here](https://github.com/StefanZhang/TwitterRealTimeAnalysis/tree/master/jars)
+  * mysql-connector-java-5.1.47.jar [here](https://github.com/StefanZhang/TwitterRealTimeAnalysis/tree/master/jars)
+  * stanford-corenlp-3.5.1.jar [here](https://github.com/StefanZhang/TwitterRealTimeAnalysis/tree/master/jars)
+  * stanford-corenlp-3.5.1-models.jar [here](https://pan.stefanzhang.com/#/s/v8tk)
+5. Install IDEA and Scala plugin on your local computer.
+6. Clone the project to local computer, load all the repositories on the pom.xml, and Maven build the Twitter_Flume_SparkStreaming-1.0-SNAPSHOT.jar. 
+7. Create new dir /root/lib on VPS, and upload the Twitter_Flume_SparkStreaming-1.0-SNAPSHOT.jar.
+8. Start MySQL service
+9. Create new table 'tweets' using (`create table tweets (
     id INT(100) AUTO_INCREMENT PRIMARY KEY,
     time VARCHAR(200),
     name VARCHAR(100),
