@@ -68,13 +68,9 @@ To get a local copy up and running follow these simple steps.
 3. Create Flume configuration file [twitter.conf](https://github.com/StefanZhang/TwitterRealTimeAnalysis/blob/master/twitter.conf) in $FLUME_HOME/conf
 4. Install IDEA and Scala plugin on your local computer.
 5. Clone the project to local computer, load all the repositories on the pom.xml, and Maven build the Twitter_Flume_SparkStreaming-1.0-SNAPSHOT.jar. 
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-1. Create new dir /root/lib on VPS, and upload the Twitter_Flume_SparkStreaming-1.0-SNAPSHOT.jar.
-2. Start MySQL service
-4. Create new table 'tweets' using (`create table tweets (
+6. Create new dir /root/lib on VPS, and upload the Twitter_Flume_SparkStreaming-1.0-SNAPSHOT.jar.
+7. Start MySQL service
+8. Create new table 'tweets' using (`create table tweets (
     id INT(100) AUTO_INCREMENT PRIMARY KEY,
     time VARCHAR(200),
     name VARCHAR(100),
@@ -82,13 +78,16 @@ To get a local copy up and running follow these simple steps.
     sentiment VARCHAR(30),
     source VARCHAR(100)
 );`)
-5. Start Flume service in $FLUME_HOME/bin, using this command:
+
+<!-- USAGE EXAMPLES -->
+## Usage
+1. Start Flume service in $FLUME_HOME/bin, using this command:
 (`nohup ./flume-ng agent \
 --conf ./root/app/apache-flume-1.6.0-cdh5.7.0-bin/conf/ \
 -f /root/app/apache-flume-1.6.0-cdh5.7.0-bin/conf/twitter.conf \
 Dflume.root.logger=DEBUG,console -n TwitterAgent >flume.log 2>&1 &
 `)
-6. Start Spark Service in $SPARK_HOME/bin, using this command:
+2. Start Spark Service in $SPARK_HOME/bin, using this command:
 (`nohup ./spark-submit \
 --class Stefanzhang.com.Twitter \
 --master local[2] \
