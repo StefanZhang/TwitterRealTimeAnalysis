@@ -94,7 +94,7 @@ Dflume.root.logger=DEBUG,console -n TwitterAgent >flume.log 2>&1 &
 --name Twitter \
 --packages org.apache.spark:spark-streaming-flume_2.11:2.2.0 \
 /root/lib/Twitter_Flume_SparkStreaming-1.0-SNAPSHOT.jar tweets [DB Password] [Host IP] [Flume Port] >spark.log 2>&1 &`)
-
+3. Logs will be output into flume.log and spark.log for debug.
 
 <!-- CONTRIBUTING -->
 ## Contributing
