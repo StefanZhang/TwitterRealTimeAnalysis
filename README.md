@@ -37,7 +37,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://sentiment.stefanzhang.com)
 
 This is the back-end implementation of [this project](https://github.com/StefanZhang/TwitterRealTimeAnalysis-Dashboard)
 
@@ -141,4 +141,6 @@ Project Link: [https://github.com/StefanZhang/TwitterRealTimeAnalysis](https://g
 [issues-url]: https://github.com/StefanZhang/TwitterRealTimeAnalysis/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/xiaofeng-stefan-zhang-26709987/
-[product-screenshot]: https://i.loli.net/2020/10/23/aNpbTWYvcQZ8xLM.png
+[product-screenshot]: https://i.loli.net/2020/10/29/r1DS5eG9P6nYOVl.png
+
+
