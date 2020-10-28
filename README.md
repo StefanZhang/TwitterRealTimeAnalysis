@@ -63,10 +63,8 @@ To get a local copy up and running follow these simple steps.
 
 1. Install/configure Apache Flume and Apache Spark on VPS correctly, make sure using CDH version of Flume.
 2. Make sure $FLUME_HOME/lib has the following .jar files: 
-  * flume-sources-1.0-SNAPSHOT.jar
-  * twitter4j-stream-4.0.2.jar
-  
-  Can be found [here](https://github.com/StefanZhang/TwitterRealTimeAnalysis/tree/master/jars)
+  * flume-sources-1.0-SNAPSHOT.jar [here](https://github.com/StefanZhang/TwitterRealTimeAnalysis/tree/master/jars)
+  * twitter4j-stream-4.0.2.jar [here](https://github.com/StefanZhang/TwitterRealTimeAnalysis/tree/master/jars)
 3. Install IDEA and Scala plugin on your local computer.
 4. Clone the project to local computer, load all the repositories on the pom.xml, and Maven build the Twitter_Flume_SparkStreaming-1.0-SNAPSHOT.jar. 
 
